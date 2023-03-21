@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Enrique Moya" />
+    <meta
+      name="description"
+      content="Replica website used for education purposes with the idea of understanding how HTML and CSS are applied on them. This is NOT the official website."
+    />
+    <meta name="color-scheme" content="light" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Replica Facebook Landing Page</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.ico" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container__grid">
+        <header class="header">
+          <img src="logo.svg" alt="Facebook logo" class="header__logo" />
+          <h2
+            class="header__banner header__banner--hidden header__banner--visible"
+          >
+            Connect with friends and the world around you on Facebook.
+          </h2>
+        </header>
+        <main class="main">
+          <form class="form">
+            <label for="email-phone" class="form__label"></label>
+            <input
+              type="email"
+              name="email-phone"
+              id="email-phone"
+              class="form__input input-email"
+              placeholder="Mobile number or email"
+              required
+            />
+            <label for="password" class="form__label"></label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="form__input"
+              placeholder="Password"
+              required
+            />
+            <label for="log-in" class="form__label"></label>
+            <input type="submit" value="Log In" class="button form__button" />
+          </form>
+          <p class="forgot-password"><a href="">Forgot password?</a></p>
+          <p class="or">or</p>
+          <button class="button create-account">Create new account</button>
+        </main>
+      </div>
+      <footer class="footer">
+        <nav class="footer__lang-nav">
+          <ul class="lang__list">
+            <li class="lang__list-item selected">
+              <a href="">English (US)</a>
+            </li>
+            <li class="lang__list-item">
+              <a href="#" lang="pt-br">Português (Brazil)</a>
+            </li>
+            <li class="lang__list-item"><a href="#" lang="de">Deutsch</a></li>
+            <li class="lang__list-item">
+              <a href="#" lang="ar-eg">العربية</a>
+            </li>
+          </ul>
+          <ul class="lang__list">
+            <li class="lang__list-item">
+              <a href="#" lang="es-mx">Espanol</a>
+            </li>
+            <li class="lang__list-item">
+              <a href="#" lang="fr">Français (France)</a>
+            </li>
+            <li class="lang__list-item"><a href="#" lang="it">Italiano</a></li>
+            <li class="lang__list-item"><a href="#" lang="jp">日本</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__main-nav">
+          <ul class="main__list">
+            <li class="main__list-item"><a href="">About</a></li>
+            <li class="main__list-item help"><a href="">Help</a></li>
+            <li class="main__list-item"><a href="">More</a></li>
+          </ul>
+        </nav>
+        <section class="footer__copyright">Meta © 2024</section>
+      </footer>
+    </div>
+  </body>
+</html>

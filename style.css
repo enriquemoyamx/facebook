@@ -1,0 +1,281 @@
+:root {
+  --color-blue: #1877f2;
+  --color-green: #42b72a;
+  --color-dark: #1c1e21;
+  --color-gray: #6e6e6e;
+  --color-light: #f0f2f5;
+  --color-LBlue: #576b95;
+
+  /* 12px */
+  --font-xs: 0.75rem;
+  /* 14px */
+  --font-s: 0.875rem;
+  /* 17px */
+  --font-m: 1.063rem;
+  /* 20px */
+  --font-l: 1.25rem;
+  /* 28px */
+  --font-xl: 1.75rem;
+
+  font-family: Helvetica, sans-serif;
+}
+
+p {
+  font-size: var(--font-m);
+}
+
+/* Media Queries */
+
+/* Layout */
+
+.container {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.main {
+  margin-bottom: 100px;
+  max-width: 416px;
+  margin: auto;
+}
+
+/* Header */
+
+.header__logo {
+  width: 25%;
+  min-width: 150px;
+  margin: 0 auto;
+}
+
+.header__banner--hidden {
+  display: none;
+}
+
+/* Main */
+
+.form__input,
+.form__button {
+  width: 100%;
+}
+
+.form__input {
+  font-size: var(--font-s);
+  padding: 0.75rem;
+  margin: 5px 0;
+  display: block;
+  border: 0;
+  background: var(--color-light);
+  border-radius: 0.25rem;
+}
+
+.button {
+  border: none;
+  padding: 0.5em;
+  font-weight: bold;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.form__button {
+  background-color: var(--color-blue);
+  color: #fff;
+  font-size: var(--font-m);
+}
+
+.form__button:hover {
+  background-color: #166fe5;
+  transition: background-color 250ms ease-in;
+}
+
+.forgot-password {
+  text-align: center;
+  color: #1772e8;
+  font-size: var(--font-s);
+  margin: 0.75rem 0;
+}
+
+.forgot-password a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.or {
+  position: relative;
+  text-align: center;
+  color: #4b4f56;
+  margin: 1rem 0;
+}
+.or::before,
+.or::after {
+  content: "";
+  position: absolute;
+  width: 42%;
+  height: 1px;
+  background: #ccd0d5;
+  top: 50%;
+}
+
+.or::before {
+  left: 0;
+}
+
+.or::after {
+  right: 0;
+}
+
+.create-account {
+  width: 80%;
+  display: block;
+  margin: 0 auto 5rem;
+  background-color: var(--color-green);
+  color: #fff;
+}
+
+.create-account:hover {
+  background-color: #36a420;
+  transition: background-color 250ms ease-in;
+}
+
+/* Footer */
+
+.footer__lang-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.lang__list {
+  width: 50%;
+  height: 100px;
+  list-style: none;
+  text-align: center;
+}
+
+.lang__list-item a {
+  text-decoration: none;
+  color: var(--color-LBlue);
+  font-size: var(--font-xs);
+}
+
+.lang__list-item:hover {
+  text-decoration: underline;
+}
+
+.selected {
+  font-weight: bold;
+}
+
+.footer__main-nav {
+  width: 100%;
+}
+
+.main__list {
+  display: flex;
+  list-style: none;
+  gap: 1em;
+  justify-content: center;
+}
+
+.main__list-item {
+  font-size: var(--font-xs);
+  color: gray;
+}
+
+.footer__copyright {
+  text-align: center;
+  font-size: var(--font-xs);
+  color: gray;
+}
+
+.help::before {
+  content: "·";
+  color: #000;
+  position: relative;
+  left: -8px;
+}
+
+.help::after {
+  content: "·";
+  color: #000;
+  position: relative;
+  right: -8px;
+}
+
+/* Media Queries */
+
+@media (min-width: 1000px) {
+  .header__banner--visible {
+    display: block;
+    font-size: var(--font-xl);
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 100%;
+    margin: 0 auto;
+    background: linear-gradient(var(--color-light) 0 66.66%, white 66.66% 100%);
+  }
+
+  .container__grid {
+    grid-area: 1 / 1 / 3 / 2;
+    display: flex;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+  }
+
+  .header__logo {
+    margin-left: -28px;
+    width: 50%;
+  }
+
+  .main {
+    width: 50%;
+    background-color: white;
+    padding: 1em;
+    border-radius: 0.25rem;
+  }
+
+  .form__input {
+    background: white;
+    border: 1px solid #dddfe2;
+  }
+
+  .form__input:focus-visible {
+    box-shadow: 0 0 0 2px #e7f3ff;
+    caret-color: #1b74e4;
+    border-color: #1b74e4;
+    outline: none;
+  }
+
+  .input-email {
+    margin-top: 0;
+  }
+
+  .create-account {
+    margin: 1.5em auto;
+  }
+
+  .footer {
+    grid-area: 3 / 1 / 4 / 2;
+    display: flex;
+    flex-direction: column;
+  }
+}
